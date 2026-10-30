@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>gallery UI</title>
+</head>
+<body>
+    <nav>
+        <h2>Photo <p>Gallery</p></h2>
+        <div class="link">
+            <a href="">Home</a>
+            <a href="">Gallery</a>
+            <a href="">Categories</a>
+            <a href="">About</a>
+        </div>
+        <div class="search_box">
+            <input 
+            type="text"
+            id="searchInput"
+            placeholder="Search Photos"
+            >
+        </div>
+    </nav>
+    <section class="filter">
+        <button data-filter="All">All</button>
+        <button data-filter="Nature">Nature</button>
+        <button data-filter="City">City</button>
+        <button data-filter="Animals">Animals</button>
+        <button data-filter="People">People</button>
+        <button data-filter="Abstract">Abstract</button>
+    </section>
+    <section class="gallery">
+      <div class="photo_card" data-category="Nature">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Mountain">
+        <h3>Mountain Lake</h3>
+      </div>
+      <div class="photo_card" data-category="Nature">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600"
+            alt="Beautiful Beach">
+        <h3>Beautiful Beach</h3>
+      </div>
+      <div class="photo_card" data-category="City">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600"
+            alt="City at Night">
+        <h3>City at Night</h3>
+      </div>
+      <div class="photo_card"  data-category="Animals">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600"
+            alt="Golden Retriever">
+        <h3>Golden Retriever</h3>
+      </div>
+     
+      <div class="photo_card" data-category="Nature">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600"
+            alt="Hiker in the Mountains">
+        <h3>Hiker in the Mountains</h3>
+      </div>
+      <div class="photo_card" data-category="Nature">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600"
+            alt="Green Forest">
+        <h3>Green Forest</h3>
+      </div>
+    </section>
+
+<!--  if photo no exist -->
+    <p id="noResults" style="display: none;">No Photos Found 😕</p>
+
+       <!-- Lightbox -->
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+    >
+
+        <button
+            type="button"
+            class="lightbox-close"
+            id="closeLightbox"
+            aria-label="Close image"
+        >&times;</button>
+
+        <button
+            type="button"
+            class="lightbox-prev"
+            id="prevImage"
+            aria-label="Previous image"
+        >&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <h3 id="lightboxTitle"></h3>
+        </div>
+
+        <button
+            type="button"
+            class="lightbox-next"
+            id="nextImage"
+            aria-label="Next image"
+        >&#10095;</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
