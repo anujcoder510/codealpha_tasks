@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Photo <span>Gallery</span></h2>
+
+        <div class="link">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </div>
+
+        <div class="search_box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Photos"
+            >
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Photo Gallery</h1>
+        <p>Explore beautiful moments through photography.</p>
+        <a href="#gallery" class="explore-btn">Explore Gallery</a>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="filter" id="categories">
+        <button class="active" data-filter="All">All</button>
+        <button data-filter="Nature">Nature</button>
+        <button data-filter="City">City</button>
+        <button data-filter="Animals">Animals</button>
+        <button data-filter="People">People</button>
+        <button data-filter="Abstract">Abstract</button>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+
+        <div class="photo_card" data-category="Nature">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Mountain">
+            <h3>Mountain Lake</h3>
+        </div>
+
+        <div class="photo_card" data-category="Nature">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Beautiful Beach">
+            <h3>Beautiful Beach</h3>
+        </div>
+
+        <div class="photo_card" data-category="City">
+            <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600" alt="City at Night">
+            <h3>City at Night</h3>
+        </div>
+
+        <div class="photo_card" data-category="Animals">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="Golden Retriever">
+            <h3>Golden Retriever</h3>
+        </div>
+
+        <div class="photo_card" data-category="Nature">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600" alt="Hiker in the Mountains">
+            <h3>Hiker in the Mountains</h3>
+        </div>
+
+        <div class="photo_card" data-category="Nature">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" alt="Green Forest">
+            <h3>Green Forest</h3>
+        </div>
+
+    </section>
+
+    <!-- No Results Message -->
+    <p id="noResults">No Photos Found 😕</p>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Welcome to our Photo Gallery.
+            This website is created using HTML, CSS and JavaScript.
+            Explore different categories of beautiful images.
+        </p>
+    </section>
+
+    <!-- Lightbox -->
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image preview"
+    >
+
+        <button type="button" class="lightbox-close" id="closeLightbox" aria-label="Close image">&times;</button>
+
+        <button type="button" class="lightbox-prev" id="prevImage" aria-label="Previous image">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <h3 id="lightboxTitle"></h3>
+        </div>
+
+        <button type="button" class="lightbox-next" id="nextImage" aria-label="Next image">&#10095;</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
